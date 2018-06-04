@@ -1,0 +1,4 @@
+
+obj = {
+    'Message': 'Hello, World!',
+}

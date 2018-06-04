@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hello-world
+  namespace: default
+  labels:
+    application: hello-world
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      application: hello-world
+  template:
+    metadata:
+      labels:
+        application: hello-world
+    spec:
+      containers:
+        - name: hello-world
+          image: betandr/hello-world:v2
+          imagePullPolicy: Always

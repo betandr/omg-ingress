@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-world
+  namespace: default
+  labels:
+    application: hello-world
+spec:
+  type: ClusterIP
+  selector:
+    application: hello-world
+  ports:
+  - port: 5000
+    targetPort: 5000
